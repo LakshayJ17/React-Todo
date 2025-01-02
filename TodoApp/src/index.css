@@ -38,6 +38,13 @@ button{
 .move-button:hover{
   background-color: hsl(207, 90%, 54%);
 }
+.completed-button{
+  background-color: hsl(130, 90%, 64%);
+}
+.completed-button:hover{
+  background-color: hsl(111, 90%, 54%);
+}
+
 input[type="text"]{
   font-size: 1.6rem;
   padding: 10px;

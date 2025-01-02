@@ -41,6 +41,17 @@ function ToDoList() {
             setTasks(updatedTasks);
         }
     }
+
+
+    function markAsCompleted(index) {
+        // Marks the task as completed if not already marked
+        const updatedTasks = [...tasks];
+        if (!updatedTasks[index].startsWith('✅')) {
+            updatedTasks[index] = `✅ ${updatedTasks[index]}`;
+        }
+        setTasks(updatedTasks);
+    }
+
     return (
         <div className='to-do-list'>
             <h1>To-Do-List</h1>
@@ -78,6 +89,11 @@ function ToDoList() {
                             className='move-button'
                             onClick={() => moveTaskDown(index)}>
                             Down
+                        </button>
+                        <button
+                            className='completed-button'
+                            onClick={() => markAsCompleted(index)}>
+                            Mark As Completed
                         </button>
                     </li>
                 )}
