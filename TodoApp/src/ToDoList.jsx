@@ -12,6 +12,7 @@ function ToDoList() {
     function addTask() {
         // Adds the new task to the list of tasks
         if (newTask.trim() !== '') {
+            // Adds the new task to the end of the list of tasks
             setTasks(t => [...t, newTask])
             // Clears the input field
             setNewTask('')
@@ -71,7 +72,10 @@ function ToDoList() {
                 </button>
             </div>
 
+            
             <ol>
+                {/* Maps the tasks to list items */}
+
                 {tasks.map((task, index) =>
                     <li key={index}>
                         <span className='text'>{task}</span>
